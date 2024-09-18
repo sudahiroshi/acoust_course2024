@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sound Spectrogram</title>
+    <link rel="stylesheet" type="text/css" href="freq.css">
+    <script src="freq.js"></script>
+    <script src="freqdraw.js"></script>
+</head>
+
+<body>
+    <!-- 中央寄せ -->
+    <div id="raw">
+        <!-- 縦軸 -->
+        <canvas id="rawYAxis" width="30" height="286"></canvas>
+        <!-- 描画 -->
+        <canvas id="rawgraph" width="800" height="256"></canvas>
+        <canvas id="rawback" width="800" height="256"></canvas>
+        <canvas id="rawpen" width="800" height="256"></canvas>
+        <!-- 横軸 -->
+        <canvas id="rawXAxis" width="890" height="30"></canvas>
+        <br>
+    </div>
+        <div id="main">
+        <!-- 縦軸 -->
+        <canvas id="YAxis" width="30" height="330"></canvas>
+        <!-- 描画 -->
+        <canvas id="graph" width="800" height="300"></canvas>
+        <canvas id="background" width="800" height="300"></canvas>
+        <canvas id="pen" width="800" height="300"></canvas>
+        <canvas id="fundamental" width="800" height="300"></canvas>
+        <!-- 横軸 -->
+        <canvas id="XAxis" width="890" height="30"></canvas>
+        <br>
+        <!-- ボタン -->
+        <div id="control_panel">
+            <input type="checkbox" id="draw_check" class="toggle_button" data-off-label="FFT" data-on-label="FFT">
+            <input type="checkbox" id="line_check" class="toggle_button" data-off-label="Line" data-on-label="Line">
+            <input type="checkbox" id="pen_check" class="toggle_button" data-off-label="Pen" data-on-label="Pen">
+        </div>
+    </div>
+</body>
+
+</html>
