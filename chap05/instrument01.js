@@ -10,7 +10,7 @@ document.querySelector( '#btn1' ).addEventListener( 'click', () => {
         osc[i] = audioCtx.createOscillator(); // オシレータノードの初期化
         amp[i] = audioCtx.createGain(); // ゲインノードの初期化
         osc[i].frequency.value = (440 * i); // 周波数
-        amp[i].gain.value = 1.0/i; // 振幅
+        amp[i].gain.value = 1.0/i/4.0; // 振幅
 
         // オシレータノード20個　→　ゲインノード20個　→　出力先
         osc[i].connect( amp[i] );
@@ -18,19 +18,19 @@ document.querySelector( '#btn1' ).addEventListener( 'click', () => {
     }
 
     // 偶数成分をカット：クラリネットのような音色
-     for( var i=2; i< number; i+=2 ) {
-        amp[i].gain.value = 0;
-    }
+    //  for( var i=2; i< number; i+=2 ) {
+    //     amp[i].gain.value = 0;
+    // }
 
     // 奇数成分をカット：ピアノのような音色
-/*     for( var i=3; i< number; i+=2 ) {
-        amp[i].gain.value = 0;
-    } */
+    // for( var i=3; i< number; i+=2 ) {
+    //     amp[i].gain.value = 0;
+    // }
 
-/*     // 高周波数成分をカット：フルートのような音色
+    // 高周波数成分をカット：フルートのような音色
     for( var i=6; i< number; i++ ) {
-        amp[i].gain.value = 0;
-    } */
+        amp[i].gain.value = 0;ß
+    }
 
     for( let i=1; i< number; i++ ) {
         osc[i].start();

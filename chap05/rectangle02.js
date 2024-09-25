@@ -19,7 +19,7 @@ document.querySelector( '#btn1' ).addEventListener( 'click', () => {
     for( let i=0; i< number; i++ ) {
         let j = i*2+1; // 周波数と振幅のためのパラメータ
         osc[i].frequency.value = 440 * j; // 周波数
-        amp[i].gain.value = 1.0/j; // 振幅
+        amp[i].gain.value = 1.0/j/4.0; // 振幅
     }
 
     for( let i=0; i< number; i++ ) {

@@ -2,6 +2,7 @@ window.AudioContext = window.webkitAudioContext || window.AudioContext;
 let audioCtx = new AudioContext();
 let oscNode;
 let gainNode = audioCtx.createGain();
+console.log( gainNode.gain );
 
 document.querySelector( '#btn1' ).addEventListener( 'click', () => {
     oscNode = audioCtx.createOscillator();
